@@ -1,0 +1,12 @@
+# GNN-track dependencies (Stage 0 of PLAN_GNN.md).
+# Install on top of `pip install -e .` (which already pulls numpy/pandas/sklearn/matplotlib).
+# CUDA-matched torch must be installed separately, e.g.
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+torch>=2.1
+torch_geometric>=2.5
+transformers>=4.40
+biopython>=1.81
+requests>=2.31
+tqdm>=4.66
+h5py>=3.10
+scipy>=1.11

@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: halo-class
+Version: 0.1.0
+Summary: Class-project track of HALO: classical models for protein subcellular localization.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Requires-Dist: scikit-learn>=1.3
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: pytest>=7.4
+
+# halo-class — CS 4824 class project
+
+Predicting protein subcellular localization from amino-acid sequences. The
+task is decomposed into 10 binary classifiers (one per compartment). Built on
+the [DeepLoc 2.0](https://services.healthtech.dtu.dk/services/DeepLoc-2.0/)
+dataset.
+
+**Read [`SPEC.md`](SPEC.md)** for the full specification and
+[`AGENTS.md`](AGENTS.md) for the repo guide. Agents starting work should read
+[`KICKOFF.md`](KICKOFF.md) first.
+
+## Quickstart
+
+```bash
+pip install -e .
+make test       # 5/5 tests
+make spec       # full classical comparison panel + figures (~30–60 min CPU)
+```
+
+## Layout
+
+```
+SPEC.md          — what to build and how to evaluate it
+AGENTS.md        — repo guide for agents (invariants, gotchas, where to find things)
+KICKOFF.md       — first-prompt template for the agent
+Data/            — DeepLoc 2.0 CSVs (source of truth, never modified)
+specData/        — engineered per-protein features (pre-built; can regenerate)
+halo/            — Python package (data loaders + spec-track models)
+tests/           — pytest smoke tests
+runs/            — produced experiment outputs (gitignored)
+Makefile         — one-line entry points
+```
